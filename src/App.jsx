@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import sgLiftLogo from "/SGLIFT_logo.PNG";
 
 // ─── SVG Icon Components ───
 const Icons = {
@@ -240,7 +241,7 @@ function Navigation({ page, setPage }) {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
         {/* Logo */}
         <div style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }} onClick={() => setPage("home")}>
-          <img src="/SGLIFT_logo.PNG" alt="Company Logo" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "contain" }} />
+          <img src={sgLiftLogo} alt="Company Logo" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "contain" }} />
           <div>
             <div style={{ color: styles.colors.white, fontWeight: 700, fontSize: 15, letterSpacing: 1.5, lineHeight: 1.2, fontFamily: "'DM Sans', sans-serif" }}>SG LIFT INSPECTION</div>
             <div style={{ color: styles.colors.gold, fontSize: 10, letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>Testing Pte Ltd</div>
@@ -342,7 +343,7 @@ function Footer({ setPage }) {
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 40 }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-            <img src="/SGLIFT_logo.PNG" alt="Company Logo" style={{ width: 40, height: 40, objectFit: "contain" }} />
+            <img src={sgLiftLogo} alt="Company Logo" style={{ width: 40, height: 40, objectFit: "contain" }} />
             <div style={{ fontWeight: 700, fontSize: 14, letterSpacing: 1.5 }}>SG LIFT INSPECTION</div>
           </div>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, lineHeight: 1.7 }}>BCA-registered and bizSAFE Level 3 certified contractor delivering top-quality lift and escalator inspection services.</p>
