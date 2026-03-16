@@ -157,10 +157,10 @@ function generateEquipmentPDF(equipment, category) {
   .footer { text-align: center; font-size: 10px; color: #999; margin-top: 30px; padding-top: 12px; border-top: 1px solid #eee; }
 </style></head><body>
 <div class="cover">
-  <div class="logo-text">SG LIFTEST</div>
+  <div class="logo-text">SINGAPORE LIFT INSPECTION TESTING</div>
   <h1>${title}</h1>
   <h2>Professional Testing & Inspection Solutions</h2>
-  <div class="company">Singapore Lift Inspection and Testing Pte Ltd<br/>BCA-Registered | bizSAFE Level 3 Certified<br/>32 Old Toh Tuck Road #02-15 I.Biz Centre, Singapore 597658</div>
+  <div class="company">Singapore Lift Inspection Testing Pte Ltd<br/>BCA-Registered | bizSAFE Level 3 Certified<br/>32 Old Toh Tuck Road #02-15 I.Biz Centre, Singapore 597658</div>
 </div>
 <div class="toc">
   <h2>Table of Contents</h2>
@@ -174,7 +174,7 @@ ${equipment.map((eq, i) => `
   <div class="desc">${eq.desc}</div>
   <h4 style="font-size:13px;margin-bottom:8px;color:#1a5276;">Key Features & Benefits</h4>
   <ul class="features">${eq.features.map(f => `<li>${f}</li>`).join('')}</ul>
-  <div class="footer">© 2026 Singapore Lift Inspection and Testing Pte Ltd | enquiry@lifttest.com | +65 9838 9971</div>
+  <div class="footer">© 2026 Singapore Lift Inspection Testing Pte Ltd | enquiry@lifttest.com | +65 9838 9971</div>
 </div>`).join('')}
 </body></html>`;
 
@@ -245,7 +245,7 @@ function Navigation({ page, setPage }) {
         <div style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 12 }} onClick={() => setPage("home")}>
           <img src={sgLiftLogo} alt="Company Logo" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "contain" }} />
           <div>
-            <div style={{ color: styles.colors.white, fontWeight: 700, fontSize: 15, letterSpacing: 1.5, lineHeight: 1.2, fontFamily: "'DM Sans', sans-serif" }}>SG LIFT INSPECTION</div>
+            <div style={{ color: styles.colors.white, fontWeight: 700, fontSize: 15, letterSpacing: 1.5, lineHeight: 1.2, fontFamily: "'DM Sans', sans-serif" }}>SINGAPORE LIFT INSPECTION TESTING</div>
             <div style={{ color: styles.colors.gold, fontSize: 10, letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>Testing Pte Ltd</div>
           </div>
         </div>
@@ -346,7 +346,7 @@ function Footer({ setPage }) {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
             <img src={sgLiftLogo} alt="Company Logo" style={{ width: 40, height: 40, objectFit: "contain" }} />
-            <div style={{ fontWeight: 700, fontSize: 14, letterSpacing: 1.5 }}>SG LIFT INSPECTION</div>
+            <div style={{ fontWeight: 700, fontSize: 14, letterSpacing: 1.5 }}>SINGAPORE LIFT INSPECTION TESTING</div>
           </div>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, lineHeight: 1.7 }}>BCA-registered and bizSAFE Level 3 certified contractor delivering top-quality lift and escalator inspection services.</p>
         </div>
@@ -368,7 +368,7 @@ function Footer({ setPage }) {
         </div>
       </div>
       <div style={{ maxWidth: 1200, margin: "40px auto 0", borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 20, textAlign: "center", color: "rgba(255,255,255,0.3)", fontSize: 12 }}>
-        © 2026 Singapore Lift Inspection and Testing Pte Ltd. All rights reserved.
+        © 2026 Singapore Lift Inspection Testing Pte Ltd. All rights reserved.
       </div>
     </footer>
   );
@@ -419,7 +419,7 @@ function HomePage({ setPage }) {
           <h2 style={{ fontSize: 13, color: styles.colors.gold, letterSpacing: 3, textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>Who We Are</h2>
           <h3 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 700, color: styles.colors.navy, marginBottom: 20, fontFamily: "'DM Sans', sans-serif" }}>Grow Your Vision</h3>
           <p style={{ fontSize: 16, color: styles.colors.gray500, lineHeight: 1.8, maxWidth: 700, margin: "0 auto" }}>
-            Elevators play a crucial role in your buildings, serving residents, shoppers, patients, and employees daily. Licensed specialists are essential for ensuring smooth and efficient operation. We at SG Lift Inspection, with our specialist inspectors, ensure your lifts are operating in good and safe conditions. Regular professional independent inspections are vital for safety and reliability.
+            Elevators play a crucial role in your buildings, serving residents, shoppers, patients, and employees daily. Licensed specialists are essential for ensuring smooth and efficient operation. We at Singapore Lift Inspection Testing, with our specialist inspectors, ensure your lifts are operating in good and safe conditions. Regular professional independent inspections are vital for safety and reliability.
           </p>
         </div>
       </section>
@@ -567,10 +567,10 @@ function AboutPage() {
       <section style={{ padding: "80px 24px", background: "white" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{ fontSize: 17, color: styles.colors.gray700, lineHeight: 1.9, marginBottom: 32 }}>
-            SG Lift Inspection and Testing is a dynamic team of experienced professionals dedicated to ensuring elevator safety, compliance, and performance. With years of expertise, we specialize in comprehensive lift inspection services, offering peace of mind to building owners, facility managers, and operators.
+            Singapore Lift Inspection Testing is a dynamic team of experienced professionals dedicated to ensuring elevator safety, compliance, and performance. With years of expertise, we specialize in comprehensive lift inspection services, offering peace of mind to building owners, facility managers, and operators.
           </p>
           <p style={{ fontSize: 17, color: styles.colors.gray700, lineHeight: 1.9, marginBottom: 32 }}>
-            Our commitment to excellence drives us to deliver reliable solutions for elevators across various industries. Trust SG Lift Inspection and Testing for all your certification needs and elevate safety with confidence! We ensure compliance with the latest SS550 standards to safeguard both users and operators alike.
+            Our commitment to excellence drives us to deliver reliable solutions for elevators across various industries. Trust Singapore Lift Inspection Testing for all your certification needs and elevate safety with confidence! We ensure compliance with the latest SS550 standards to safeguard both users and operators alike.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24, marginTop: 48 }}>
