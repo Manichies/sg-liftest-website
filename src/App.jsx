@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import sgLiftLogo from "/SGLIFT_logo.PNG";
+import bcaLogo from "/BCA.png";
+import bizSafeLogo from "/BizSafe3.png";
 
 // ─── SVG Icon Components ───
 const Icons = {
@@ -385,8 +387,8 @@ function HomePage({ setPage }) {
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ maxWidth: 680 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 12, background: "rgba(232,185,49,0.15)", border: "1px solid rgba(232,185,49,0.3)", borderRadius: 20, padding: "6px 16px", marginBottom: 24 }}>
-              <img src="/BCA.png" alt="BCA Registered" style={{ height: 24, width: "auto" }} />
-              <img src="/BizSafe3.png" alt="bizSAFE Level 3" style={{ height: 24, width: "auto" }} />
+              <img src={bcaLogo} alt="BCA Registered" style={{ height: 24, width: "auto" }} />
+              <img src={bizSafeLogo} alt="bizSAFE Level 3" style={{ height: 24, width: "auto" }} />
             </div>
             <h1 style={{ fontSize: "clamp(36px, 5vw, 56px)", fontWeight: 800, lineHeight: 1.1, marginBottom: 20, fontFamily: "'DM Sans', sans-serif", letterSpacing: -1 }}>
               Your Lift Safety<br/><span style={{ color: styles.colors.gold }}>Partners</span>
@@ -531,8 +533,8 @@ function HomePage({ setPage }) {
             As a BCA-registered and bizSAFE Level 3 certified contractor, we deliver top-quality, safe, and reliable lift and escalator services meeting the highest industry standards.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 40, alignItems: "center", flexWrap: "wrap" }}>
-            <img src="/BCA.png" alt="BCA Registered" style={{ width: 240, height: 192, objectFit: "contain" }} />
-            <img src="/BizSafe3.png" alt="bizSAFE Level 3 Certified" style={{ width: 240, height: 192, objectFit: "contain" }} />
+            <img src={bcaLogo} alt="BCA Registered" style={{ width: 240, height: 192, objectFit: "contain" }} />
+            <img src={bizSafeLogo} alt="bizSAFE Level 3 Certified" style={{ width: 240, height: 192, objectFit: "contain" }} />
           </div>
         </div>
       </section>
