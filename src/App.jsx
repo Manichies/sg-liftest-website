@@ -826,7 +826,7 @@ export default function App() {
       </div>
       {/* WhatsApp floating bubble */}
       <a
-        href="https://wa.me/6596151522"
+        href="https://wa.me/6596151522?text=Hello"
         target="_blank"
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"
