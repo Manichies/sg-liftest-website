@@ -671,7 +671,7 @@ function EquipmentPage({ type, setPage }) {
               color: "white", border: "none", padding: "12px 24px", borderRadius: 8,
               fontWeight: 600, fontSize: 14, cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
             }}>
-              <Icons.Download /> {type === "lift" ? "Lift Testing Equipement Catelog" : "Download Escalator Equipment Catalogue"}
+              <Icons.Download /> {type === "lift" ? "Download Lift Testing Equipment Catelog" : "Download Escalator Equipment Catalogue"}
             </button>
           </div>
 
