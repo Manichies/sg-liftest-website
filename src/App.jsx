@@ -825,26 +825,75 @@ export default function App() {
         <Footer setPage={setPage} />
       </div>
       {/* WhatsApp floating bubble */}
-      <a
-        href="https://wa.me/6596151522?text=Hello"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Chat with us on WhatsApp"
-        style={{
-          position: "fixed", bottom: 28, right: 28, zIndex: 9999,
-          width: 60, height: 60, borderRadius: "50%",
-          background: "#25D366",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          color: "white",
-          boxShadow: "0 4px 16px rgba(37,211,102,0.5)",
-          textDecoration: "none",
-          transition: "transform 0.2s, box-shadow 0.2s",
-        }}
-        onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.1)"; e.currentTarget.style.boxShadow = "0 6px 20px rgba(37,211,102,0.7)"; }}
-        onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(37,211,102,0.5)"; }}
-      >
-        <Icons.WhatsApp />
-      </a>
+      <style>{`
+        @keyframes wa-shake {
+          0%,100% { transform: rotate(0deg); }
+          15% { transform: rotate(-15deg); }
+          30% { transform: rotate(15deg); }
+          45% { transform: rotate(-10deg); }
+          60% { transform: rotate(10deg); }
+          75% { transform: rotate(-5deg); }
+          90% { transform: rotate(5deg); }
+        }
+        @keyframes wa-ripple {
+          0% { transform: scale(1); opacity: 0.6; }
+          100% { transform: scale(2.4); opacity: 0; }
+        }
+        .wa-bubble { animation: wa-shake 1.2s ease-in-out infinite; animation-delay: 0s; }
+        .wa-bubble:hover { animation: none; transform: scale(1.1) !important; }
+        .wa-ripple1 { animation: wa-ripple 1.8s ease-out infinite; }
+        .wa-ripple2 { animation: wa-ripple 1.8s ease-out infinite 0.6s; }
+        .wa-ripple3 { animation: wa-ripple 1.8s ease-out infinite 1.2s; }
+        .wa-tooltip {
+          position: absolute; right: 70px; bottom: 10px;
+          background: #1a1a1a; color: white;
+          padding: 8px 14px; border-radius: 8px;
+          font-size: 13px; font-family: 'DM Sans', sans-serif;
+          white-space: nowrap; pointer-events: none;
+          opacity: 1; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .wa-tooltip::after {
+          content: ''; position: absolute; left: 100%; top: 50%;
+          transform: translateY(-50%);
+          border: 6px solid transparent;
+          border-left-color: #1a1a1a;
+        }
+      `}</style>
+      <div style={{ position: "fixed", bottom: 28, right: 28, zIndex: 9999, display: "flex", alignItems: "center" }}>
+        {/* Tooltip */}
+        <div className="wa-tooltip">Have a question? Contact us now</div>
+        {/* Ripple rings */}
+        <div style={{ position: "relative", width: 60, height: 60 }}>
+          {["wa-ripple1","wa-ripple2","wa-ripple3"].map(cls => (
+            <span key={cls} className={cls} style={{
+              position: "absolute", inset: 0, borderRadius: "50%",
+              background: "#25D366", display: "block",
+            }} />
+          ))}
+          {/* Red alert dot */}
+          <span style={{
+            position: "absolute", top: 2, right: 2, zIndex: 2,
+            width: 14, height: 14, borderRadius: "50%",
+            background: "#ff3b3b", border: "2px solid white",
+          }} />
+          {/* Button */}
+          <a
+            href="https://wa.me/6596151522?text=Hello"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wa-bubble"
+            style={{
+              position: "absolute", inset: 0, borderRadius: "50%",
+              background: "#25D366",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              color: "white", textDecoration: "none", zIndex: 1,
+              boxShadow: "0 4px 16px rgba(37,211,102,0.5)",
+            }}
+          >
+            <Icons.WhatsApp />
+          </a>
+        </div>
+      </div>
     </>
   );
 }
