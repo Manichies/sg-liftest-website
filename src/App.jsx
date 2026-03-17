@@ -659,7 +659,7 @@ function EquipmentPage({ type, setPage }) {
             <button onClick={() => {
               const filename = type === "lift" ? "Lift-testing-equpiment-catelog.pdf" : "escalator-testing-equipment-catelog.pdf";
               const a = document.createElement('a');
-              a.href = `/${filename}`;
+              a.href = `${import.meta.env.BASE_URL}${filename}`;
               a.download = filename;
               a.click();
             }} style={{
