@@ -744,6 +744,29 @@ function EquipmentPage({ type, setPage }) {
 
 // ─── Contact Page ───
 function ContactPage() {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      const res = await fetch("https://formspree.io/f/xreyrnql", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, message: form.message }),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <div>
       <section style={{ background: `linear-gradient(135deg, ${styles.colors.navy}, #1a3a5c)`, padding: "80px 24px 60px", textAlign: "center", color: "white" }}>
@@ -782,17 +805,26 @@ function ContactPage() {
 
           <div>
             <h3 style={{ fontSize: 22, fontWeight: 700, color: styles.colors.navy, marginBottom: 24, fontFamily: "'DM Sans', sans-serif" }}>Send A Message</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              <input placeholder="Full Name" style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none" }} />
-              <input placeholder="Email Address" style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none" }} />
-              <input placeholder="Phone Number" style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none" }} />
-              <textarea placeholder="Your Message" rows={5} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none", resize: "vertical" }} />
-              <button style={{
-                background: `linear-gradient(135deg, ${styles.colors.gold}, ${styles.colors.goldLight})`,
-                color: styles.colors.navy, border: "none", padding: "14px 32px", borderRadius: 8,
-                fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
-              }}>Send Message</button>
-            </div>
+            {status === "success" ? (
+              <div style={{ background: "#e8f5e9", border: "1px solid #a5d6a7", borderRadius: 8, padding: "24px 20px", textAlign: "center" }}>
+                <p style={{ color: "#2e7d32", fontWeight: 600, fontSize: 15, marginBottom: 6 }}>Message sent successfully!</p>
+                <p style={{ color: "#388e3c", fontSize: 13 }}>We'll get back to you as soon as possible.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <input required placeholder="Full Name" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none" }} />
+                <input required type="email" placeholder="Email Address" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none" }} />
+                <input placeholder="Phone Number" value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none" }} />
+                <textarea required placeholder="Your Message" rows={5} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #e0e0e0", fontSize: 14, fontFamily: "'DM Sans', sans-serif", outline: "none", resize: "vertical" }} />
+                {status === "error" && <p style={{ color: "#c0392b", fontSize: 13 }}>Something went wrong. Please try again or email us directly.</p>}
+                <button type="submit" disabled={status === "sending"} style={{
+                  background: `linear-gradient(135deg, ${styles.colors.gold}, ${styles.colors.goldLight})`,
+                  color: styles.colors.navy, border: "none", padding: "14px 32px", borderRadius: 8,
+                  fontWeight: 700, fontSize: 15, cursor: status === "sending" ? "not-allowed" : "pointer",
+                  fontFamily: "'DM Sans', sans-serif", opacity: status === "sending" ? 0.7 : 1,
+                }}>{status === "sending" ? "Sending..." : "Send Message"}</button>
+              </form>
+            )}
           </div>
         </div>
       </section>
