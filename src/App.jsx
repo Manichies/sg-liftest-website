@@ -356,7 +356,7 @@ function Footer({ setPage }) {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
             <img src={sgLiftLogo} alt="Company Logo" style={{ width: 40, height: 40, objectFit: "contain" }} />
-            <div style={{ fontWeight: 700, fontSize: 14, letterSpacing: 1.5 }}>SINGAPORE LIFT INSPECTION TESTING</div>
+            <div style={{ fontWeight: 700, fontSize: 14, letterSpacing: 1.5 }}>SINGAPORE LIFT INSPECTION & TESTING</div>
           </div>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, lineHeight: 1.7 }}>BCA-registered and bizSAFE Level 3 certified contractor delivering top-quality lift and escalator inspection services.</p>
         </div>
