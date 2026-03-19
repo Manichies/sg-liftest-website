@@ -256,7 +256,7 @@ function Navigation({ page, setPage }) {
           <img src={sgLiftLogo} alt="Company Logo" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "contain" }} />
           <div>
             <div style={{ color: styles.colors.white, fontWeight: 700, fontSize: 15, letterSpacing: 1.5, lineHeight: 1.2, fontFamily: "'DM Sans', sans-serif" }}>SINGAPORE LIFT INSPECTION TESTING</div>
-            <div style={{ color: styles.colors.gold, fontSize: 10, letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>Testing Pte Ltd</div>
+            <div style={{ color: styles.colors.gold, fontSize: 10, letterSpacing: 2.5, textTransform: "uppercase", fontWeight: 500 }}>Inspection & Testing Pte Ltd</div>
           </div>
         </div>
 
