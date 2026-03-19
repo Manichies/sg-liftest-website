@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import sgLiftLogo from "/SGLIFT_logo.PNG";
+import sgLiftLogo from "/SGLIFT_logo_lifttest.png";
 import bcaLogo from "/BCA.png";
 import bizSafeLogo from "/BizSafe3.png";
 import elevatorClosingPressureImg from "./assets/ElevatorClosingPressure.JPG";
