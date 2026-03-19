@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import sgLiftLogo from "/SGLIFT_logo.PNG";
 import bcaLogo from "/BCA.png";
 import bizSafeLogo from "/BizSafe3.png";
+import elevatorClosingPressureImg from "./assets/ElevatorClosingPressure.JPG";
 
 // ─── SVG Icon Components ───
 const Icons = {
@@ -69,7 +70,7 @@ const liftEquipment = [
   { id: "rope-flaw", name: "Elevator Wire Rope Flaw Detector", tagline: "Precision Magnetic Inspection for Hidden Wire Rope Defects", desc: "Uses magnetic flux leakage technology to detect internal and external defects in elevator wire ropes, including broken wires, corrosion, and fatigue damage invisible to the naked eye.", features: ["Detects internal broken wires", "Magnetic flux leakage technology", "High-speed scanning capability", "Visual defect mapping output", "Compliant with international rope standards"], color: "#c0392b" },
   { id: "rope-tension", name: "Elevator Wire Rope Tension Tester", tagline: "Accurate Measurement for Balanced Elevator Rope Tension", desc: "Precision instrument for measuring and comparing tension across multiple elevator hoisting ropes to ensure balanced load distribution and prevent premature rope wear.", features: ["Multi-rope simultaneous measurement", "Digital display with deviation alerts", "Portable clamp-on design", "Data storage & export capability", "Ensures balanced rope loading"], color: "#2e86c1" },
   { id: "door-clearance", name: "Elevator Door Opening Clearance Detector", tagline: "Precision Measurement for Door Gap Alignment & Safety Compliance", desc: "Measures the clearance gaps around elevator doors to ensure they meet safety standards for finger entrapment prevention and smooth door operation.", features: ["Sub-millimetre measurement accuracy", "Articulated probe for tight spaces", "Digital display & logging", "Standards-compliant reporting", "Lightweight handheld design"], color: "#d4ac0d" },
-  { id: "closing-pressure", name: "Elevator Closing Pressure Tester", tagline: "Safety Testing for Door Closing Force Compliance", desc: "Measures the kinetic energy and force of closing elevator doors to verify compliance with safety limits, protecting passengers from door-related injuries.", features: ["Force & kinetic energy measurement", "Peak detection with data hold", "Meets EN 81-20 requirements", "Compact handheld probe", "Instant pass/fail indication"], color: "#117864", image: `${import.meta.env.BASE_URL}ElevatorClosingPressure.JPG` },
+  { id: "closing-pressure", name: "Elevator Closing Pressure Tester", tagline: "Safety Testing for Door Closing Force Compliance", desc: "Measures the kinetic energy and force of closing elevator doors to verify compliance with safety limits, protecting passengers from door-related injuries.", features: ["Force & kinetic energy measurement", "Peak detection with data hold", "Meets EN 81-20 requirements", "Compact handheld probe", "Instant pass/fail indication"], color: "#117864", image: elevatorClosingPressureImg },
 ];
 
 const escalatorEquipment = [
