@@ -184,7 +184,7 @@ ${equipment.map((eq, i) => `
   <div class="desc">${eq.desc}</div>
   <h4 style="font-size:13px;margin-bottom:8px;color:#1a5276;">Key Features & Benefits</h4>
   <ul class="features">${eq.features.map(f => `<li>${f}</li>`).join('')}</ul>
-  <div class="footer">© 2026 Singapore Lift Inspection Testing Pte Ltd | enquiry@lifttest.com | +65 9615 1522</div>
+  <div class="footer">© 2026 Singapore Lift Inspection Testing Pte Ltd | enquiry@sglifttest.com | +65 9615 1522</div>
 </div>`).join('')}
 </body></html>`;
 
@@ -372,7 +372,7 @@ function Footer({ setPage }) {
           <h4 style={{ color: styles.colors.gold, fontSize: 13, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16 }}>Contact</h4>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.Phone /> +65 9615 1522</div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.Mail /> enquiry@lifttest.com</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.Mail /> enquiry@sglifttest.com</div>
             <div style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.MapPin /> 32 Old Toh Tuck Road #02-15<br/>I.Biz Centre, Singapore 597658</div>
           </div>
         </div>
@@ -792,7 +792,7 @@ function ContactPage() {
                 <div style={{ width: 44, height: 44, background: `${styles.colors.gold}22`, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", color: styles.colors.gold, flexShrink: 0 }}><Icons.Mail /></div>
                 <div>
                   <h4 style={{ fontSize: 14, fontWeight: 600, color: styles.colors.navy, marginBottom: 4, fontFamily: "'DM Sans', sans-serif" }}>Email</h4>
-                  <p style={{ fontSize: 14, color: styles.colors.gray500 }}>enquiry@lifttest.com</p>
+                  <p style={{ fontSize: 14, color: styles.colors.gray500 }}>enquiry@sglifttest.com</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
