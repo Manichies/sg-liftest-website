@@ -8,7 +8,7 @@ import elevatorGovernorTesterImg from "./assets/ElevatorGovernorTester.JPG";
 import elevatorWireRopeFlawDetectorImg from "./assets/ElevatorWireRopeFlawDetector.PNG";
 import elevatorRopeSlipDetectorImg from "./assets/ElevatorWireRopeSlipDetector.PNG";
 import elevatorWireRopeTensionImg from "./assets/ElevatorWireRopeTension.jpg";
-import elevatorLandingDoorImg from "./assets/ElevatorLandingDoorStressDeformationDetector.jpg";
+import elevatorLandingDoorImg from "./assets/ElevatorLandingDoorStressDeformationDetector.JPG";
 
 // ─── SVG Icon Components ───
 const Icons = {
