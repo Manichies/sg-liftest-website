@@ -531,7 +531,7 @@ function HomePage({ setPage }) {
                   onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
                 >
                   <div style={{ display: "flex", justifyContent: "center", padding: "16px 16px 0" }}>
-                    <EquipmentSVG type={eq.id} color={eq.color} size={160} />
+                    {eq.image ? <img src={eq.image} alt={eq.name} style={{ width: 160, height: 160, objectFit: "contain" }} /> : <EquipmentSVG type={eq.id} color={eq.color} size={160} />}
                   </div>
                   <div style={{ padding: "12px 16px 16px" }}>
                     <h5 style={{ fontSize: 14, fontWeight: 600, color: styles.colors.navy, marginBottom: 4, fontFamily: "'DM Sans', sans-serif" }}>{eq.name}</h5>
