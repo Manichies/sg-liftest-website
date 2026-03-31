@@ -675,7 +675,7 @@ function EquipmentPage({ type, setPage }) {
           {/* Download PDF button */}
           <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 32 }}>
             <button onClick={() => {
-              const filename = type === "lift" ? "Lift-testing-equpiment-catelog.pdf" : "escalator-testing-equipment-catelog.pdf";
+              const filename = type === "lift" ? "Singapore_Lift_Test_Product_Catalog_2025V1.pdf" : "Singapore_Lift_Test_Escalator_Catalog_2025V1.pdf";
               const a = document.createElement('a');
               a.href = `${import.meta.env.BASE_URL}${filename}`;
               a.download = filename;
