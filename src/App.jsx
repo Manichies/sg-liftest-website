@@ -379,7 +379,7 @@ function Footer({ setPage }) {
         <div>
           <h4 style={{ color: styles.colors.gold, fontSize: 13, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16 }}>Contact</h4>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.Phone /> +65 9615 1522</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.Phone /> +65 8101 4422</div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.Mail /> enquiry@sglifttest.com</div>
             <div style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 13 }}><Icons.MapPin /> 32 Old Toh Tuck Road #02-15<br/>I.Biz Centre, Singapore 597658</div>
           </div>
@@ -793,7 +793,7 @@ function ContactPage() {
                 <div style={{ width: 44, height: 44, background: `${styles.colors.gold}22`, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", color: styles.colors.gold, flexShrink: 0 }}><Icons.Phone /></div>
                 <div>
                   <h4 style={{ fontSize: 14, fontWeight: 600, color: styles.colors.navy, marginBottom: 4, fontFamily: "'DM Sans', sans-serif" }}>Phone</h4>
-                  <p style={{ fontSize: 14, color: styles.colors.gray500 }}>+65 9615 1522</p>
+                  <p style={{ fontSize: 14, color: styles.colors.gray500 }}>+65 8101 4422</p>
                 </div>
               </div>
               <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
@@ -925,7 +925,7 @@ export default function App() {
           }} />
           {/* Button */}
           <a
-            href="https://wa.me/6596151522?text=Hello"
+            href="https://wa.me/6581014422?text=Hello"
             target="_blank"
             rel="noopener noreferrer"
             className="wa-bubble"
