@@ -761,7 +761,7 @@ function ContactPage() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("https://formspree.io/f/mgoqgara", {
+      const res = await fetch("https://formspree.io/f/xojbgebq", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, message: form.message }),
